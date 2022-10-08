@@ -1,0 +1,187 @@
+@font-face {
+    font-family: inter;
+    src: url(inter.ttf);
+  }
+
+@font-face {
+    font-family: interregular;
+    src: url(interFont/inter.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: interlight;
+    src: url(interFont/interlight.ttf);
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: interbold;
+    src: url(interFont/interbold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: intersemibold;
+    src: url(interFont/intersemibold.ttf);
+}
+
+@font-face {
+    font-family: interheavy;
+    src: url(interFont/interheavy.ttf);
+    font-weight: heavy;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: interregular;
+    font-weight: normal;
+}
+
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-family: interregular;
+    font-weight: normal;
+
+}
+
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: inter;
+    }
+
+a {
+    text-decoration: none;
+}
+
+.deftitle, .nav, .logotitle {
+    display:inline-block;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%
+}
+
+
+
+.nav {
+    float: right; 
+    font-family: interlight;
+}
+
+.nav a {
+    padding-right: 16px;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(49,49,49);
+    transition: 0.25s;
+}
+
+a:hover { 
+  color: rgb(200,200,200);
+}
+
+.deftitle {
+    padding-left: 16px;
+    padding-top: 13px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    float: left;
+    color: rgb(49,49,49);
+}
+
+.header {
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    font-family: inter;
+    background: rgba(255,255,255,0.9);
+    }
+
+.space {
+    padding-top: 50px;
+}
+
+.bigtitle {
+    font-size: 50px;
+    font-family: intersemibold;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.logotitle {
+    height: 20px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.normalbtn {
+    color: white;
+    background-color: rgb(0,113,227);
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.ip14 {
+    background-image: linear-gradient(to right, rgb(44, 162, 180), 
+        rgb(85, 152, 222) 24%, 
+        rgb(127, 135, 255) 45%, 
+        rgb(246, 90, 173) 76%, 
+        rgb(236, 61, 67));
+    background-clip: text;
+    color: transparent;
+    font-family: intersemibold;
+    letter-spacing: -0.6px;
+    font-size: 24px;
+    min-height: 100%;
+    display: inline-block;
+}
+
+.subh {
+    -webkit-font-smoothing: antialiased;
+    font-family: interregular;
+    letter-spacing: -1.3px;
+    font-size: 21px;
+    font-weight: 1000;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.coltitle {
+    font-family: intersemibold;
+    font-size: 28px;
+    
+}
