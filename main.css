@@ -44,7 +44,6 @@ html {
 }
 
 body {
-    vertical-align: middle;
 }
 
 p {
@@ -138,6 +137,13 @@ a:hover {
     letter-spacing: -2px;
 }
 
+.medtitle {
+    font-size: 30px;
+    font-family: intersemibold;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
 .logotitle {
     height: 20px;
 }
@@ -167,12 +173,12 @@ normalbtn:hover {
   color: rgb(200,200,200);
 }
 
-.ip14 {
-    background-image: linear-gradient(to right, rgb(44, 162, 180), 
-        rgb(85, 152, 222) 24%, 
-        rgb(127, 135, 255) 45%, 
-        rgb(246, 90, 173) 76%, 
-        rgb(236, 61, 67));
+.shiny {
+    background-image: linear-gradient(90deg, 
+        rgba(73,136,170,1) 0%, 
+        rgba(9,9,121,1) 31%, 
+        rgba(25,199,226,1) 67%, 
+        rgba(83,14,171,1) 100%);
     background-clip: text;
     color: transparent;
     font-family: intersemibold;
@@ -180,6 +186,7 @@ normalbtn:hover {
     font-size: 24px;
     min-height: 100%;
     display: inline-block;
+    padding: 14px 16px;
 }
 
 .subh {
