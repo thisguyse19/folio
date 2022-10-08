@@ -144,6 +144,11 @@ a:hover {
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+    transition: 0.25s;
+}
+
+normalbtn:hover { 
+  color: rgb(200,200,200);
 }
 
 .ip14 {
