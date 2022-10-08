@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bgdark" id="html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 <script type="text/javascript" src="main.js"></script>
@@ -10,7 +10,7 @@
     <div class="deftitle">ThisGuyse</div>
     <div class="nav">
         <a href="index.html">Home</a>
-        <a href="#">Testing</a>
+        <a onclick="lightmode()">Toggle light/dark mode</a>
     </div>
 </div>
 
@@ -21,22 +21,24 @@
 
 </head>
 
-<body style="font-family:interregular; padding:0px 14px;">
-<center>
-<br>
-<div class="bigtitle"><center>Why are you here?</center></div>
-<br>
-<div class="subh"><center>Nothing's ready for you yet!</center></div>
-<br>
-<input type="text" placeholder="Really?" id="buy1" class="normalinput">
-<br>
-<br>
-<a onclick='goMain()' class="normalbtn">Buy now</a>
-<br>
+<body style="font-family:interregular;">
+<div class="offwhite bgdark mainbody" id="mainbody">
+    <center>
+    <br>
+    <div class="bigtitle"><center>Why are you here?</center></div>
+    <br>
+    <div class="bodytxt" id="nth"><center>Nothing's ready for you yet!</center></div>
+    <br>
+    <input type="text" placeholder="Really?" id="buy1" class="offwhite normalinput">
+    <br>
+    <br>
+    <a onclick='goMain()' class="greyish normalbtn" id="buybtn">Tell me</a>
+    <br>
 
-<br>
+    <br>
 
-</center>
+    </center>
+</div>
 </body>
 
 
