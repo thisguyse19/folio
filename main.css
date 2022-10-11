@@ -67,6 +67,7 @@ a {
 
 textarea:focus, input:focus{
     outline: none;
+    -webkit-outline: none;
 }
 
 .deftitle, .nav, .logotitle {
