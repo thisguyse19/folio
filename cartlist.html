@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="bglight" id="html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <head>
 
 <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="main.css">
-<title>Cartlist</title>
+<title>CartList</title>
 
 <div class="header sticky" id="header">
-    <div class="deftitle">CartList</div>
+    <div class="deftitle">CartList Dev</div>
     <div class="nav">
         <a href="index.html">Home</a>
-        <a href="#test">Testing</a>
+        <a onclick="lightmode()">Toggle light/dark mode</a>
     </div>
 </div>
 
@@ -32,20 +32,51 @@
     </div>
 
 </section>
+
+
+<section class="greyish bglight" id="subbody">
+<div id="item-display-block" class="item-display">
+        <div id="item-display-indiv" class="item-display-indiv">
+            <p class="disptitle-name" id="show-itemNameS">NAME</p>
+            <p class="disptitle-price" id="show-itemPriceS">PRICE</p>
+        </div>
+        <hr style="width:90vw; max-width:620px">
+        <div id="item-display-indiv" class="item-display-indiv">
+            <div id="item-desc" class="item-name-vert">
+                <p class="disp-name" id="show-itemNameS">Sample</p>
+                <p class="disp-name-under" id="show-itemDescS">Sample notes</p>
+            </div>
+                <p class="disp-price" id="show-itemPriceS">$ 150</p>
+        </div>
+
+
+
+
+</div>
+
+<div id="item-display-total" class="item-display">
+    <hr style="width:90vw; max-width:620px;">
+    <div id="item-display-total-indiv" class="item-display-total-indiv">
+        <p class="itemTotalText alignLeft" id="totalText">Total</p>
+        <p class="itemTotalText alignRight" id="totalPrice">-</p>
+    </div>
+</div>
+</section>
+
 <div id="add-item-modal" class="modal">
     <div class="modal-content">
         <div class="bodytitle" >&#128229;  Add a new item</div>
         <div class="body2txt space" id="item-name">Name of item</div>
         <br>
-        <input type="text" placeholder="" style="width: 300px; max-width: 65vw;" id="item-name" class="inputlight normalinput item-name">
+        <input type="text" placeholder="" style="width: 300px; max-width: 60vw;" id="item-name" class="inputlight normalinput item-name">
         <br>
         <div class="body2txt space item-price-title" id="item-price">Price</div>
         <br>
         <p class="body2txt" style="display: inline-block; padding-right: 3px;">$</p><input type="text" placeholder="" style="width: 90px; max-width: 15vw;" id="item-price" class="inputlight normalinput item-price">
         <br>
-        <div class="body2txt space" id="item-notes">Any notes?</div>
+        <div class="body2txt space" id="item-notes">Category / notes</div>
         <br>
-        <input type="text" placeholder="" style="width: 300px; max-width: 40vw;" id="item-notes" class="inputlight normalinput item-notes">
+        <input type="text" placeholder="" style="width: 300px; max-width: 60vw;" id="item-notes" class="inputlight normalinput item-notes">
         <br>
         <br>
         <div class="btn-container">
@@ -56,35 +87,6 @@
         <br>
     </div>
 </div>
-
-
-<section class="greyish bglight">
-<div id="item-display-block" class="item-display">
-        <div id="item-display-indiv" class="item-display-indiv">
-            <p class="disptitle-name" id="show-itemNameS">NAME</p>
-            <p class="disptitle-price" id="show-itemPriceS">PRICE</p>
-        </div>
-        <hr style="width:95vw; max-width:620px">
-        <!--
-        <div id="item-display-indiv" class="item-display-indiv">
-            <p class="disp-name" id="show-itemNameS">Sample</p>
-            <p class="disp-price" id="show-itemPriceS">150</p>
-        </div>
-        -->
-
-
-
-
-</div>
-
-<div id="item-display-total" class="item-display">
-    <hr style="width:95vw; max-width:620px;">
-    <div id="item-display-total-indiv" class="item-display-total-indiv">
-        <p class="itemTotalText alignLeft" id="totalText">Total</p>
-        <p class="itemTotalText alignRight" id="totalPrice">-</p>
-    </div>
-</div>
-</section>
 <!--
 
             <p id="show-itemName"></p>

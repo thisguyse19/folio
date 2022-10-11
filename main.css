@@ -65,9 +65,12 @@ a {
     text-decoration: none;
 }
 
+
+
 textarea:focus, input:focus{
     outline: none;
     -webkit-outline: none;
+
 }
 
 .deftitle, .nav, .logotitle {
@@ -119,6 +122,7 @@ textarea:focus, input:focus{
     border-top: none;
     border-left: none;
     border-right: none;
+    border-radius: 0px;
 }
 
 .inputdark {
@@ -204,6 +208,15 @@ textarea:focus, input:focus{
     font-weight: 800;
 }
 
+.body2txt-neg {
+    -webkit-font-smoothing: antialiased;
+    font-family: interregular;
+    letter-spacing: -0.9px;
+    font-size: 14px;
+    font-weight: 800;
+    color: rgb(255,102,102);
+}
+
 .page-header-container {
     display:  flex;
     flex-direction: row;
@@ -258,21 +271,21 @@ textarea:focus, input:focus{
 
 
 .item-display-indiv {
-    width: 95vw;
+    width: 90vw;
     max-width: 620px;
     display: flex;
     flex: 1;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 20px;
+    gap: 15px;
     padding-top: 25px;
     font-size: 14px;
     color: rgb(49,49,49);
 }
 
 .item-display-total-indiv {
-    width: 95vw;
+    width: 90vw;
     max-width: 620px;
     display: flex;
     flex: 1;
@@ -294,6 +307,9 @@ textarea:focus, input:focus{
     justify-content: space-around;
     width: 270px;
     flex: 1;
+    font-weight: bold;
+    font-size: 21px;
+    color: rgb(52,52,52);
 }
 
 .item-display-indiv .disp-name {
@@ -314,6 +330,24 @@ textarea:focus, input:focus{
     text-align: right;
     font-weight: bold;
     color: #aaaaaa;
+}
+
+.item-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+.item-px-vert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.disp-name-under {
+    color: rgb(153,153,153);
+}
 }
 
 .itemTotalText {
