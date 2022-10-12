@@ -7,16 +7,13 @@
 <title>CartList</title>
 
 <div class="header sticky" id="header">
-    <div class="deftitle">CartList Dev</div>
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a onclick="lightmode()">Toggle light/dark mode</a>
+    <div class="header-items" id="header-items">
+        <p class="header-title">CartList Dev</p>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a onclick="lightmode()">Toggle light/dark mode</a>
+        </div>
     </div>
-</div>
-
-<div class="space">
-<p></p>    
-
 </div>
 
 </head>
@@ -63,7 +60,7 @@
 </div>
 </section>
 
-<div id="add-item-modal" class="modal">
+<div id="add-item-modal" class="modal is-show-none is-show-none-trans">
     <div class="modal-content">
         <div class="bodytitle" >&#128229;  Add a new item</div>
         <div class="body2txt space" id="item-name">Name of item</div>
@@ -81,9 +78,27 @@
         <br>
         <div class="btn-container">
         <a onclick="addItemSubmit()" class="greyish normalbtn add-cfm" style="vertical-align: right;" id="add-cfm">Add</a>
-        <span class="greyish negbtn closebtn" id="closebtn">Close</span>
+        <a class="greyish negbtn closebtn" id="closebtn">Close</a>
         </div>
 
+        <br>
+    </div>
+</div>
+
+<div id="retrieve-item-modal" class="modal is-show-none is-show-none-trans">
+    <div class="modal-content">
+        <div class="bodytitle">View item</div>
+        <div class="body2txt" style ="padding-top: 20px;">
+            <div class="modaltitle" id="item-modal-name"></div>
+            <br>
+            <span>Price &#183; </span><span id="item-modal-price" style="color:rgb(143,143,143);"></span>
+            <br>
+            <br>
+            <span>Category / notes &#183; </span><span id="item-modal-notes" style="color:rgb(143,143,143);"></span>
+        </div>
+        <div class="btn-container">
+        <a class="greyish negbtn closeRbtn">Close</a>
+        </div>
         <br>
     </div>
 </div>

@@ -44,12 +44,10 @@ html {
 }
 
 body {
+    padding-top: 100px;
 }
 
 p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     font-family: interregular;
     font-weight: normal;
 
@@ -63,6 +61,16 @@ h1 {
 
 a {
     text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 
@@ -73,9 +81,6 @@ textarea:focus, input:focus{
 
 }
 
-.deftitle, .nav, .logotitle {
-    display:inline-block;
-}
 
 .sticky {
   position: sticky;
@@ -84,15 +89,70 @@ textarea:focus, input:focus{
 }
 
 
+.normalinput {
+    background-color: rgba(0,0,0,0);
+    height: 30px;
+    font-size: 14px;
+    text-align: left;
+    font-color: rgb(255,255,255);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+}
+
+.inputdark {
+    border-bottom: 2px solid rgb(255,255,255);
+}
+
+.inputlight {
+    border-bottom: 2px solid rgb(49,49,49);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    font-family: inter;
+    background-color: rgba(255,255,255,0.84);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 0px 15px rgba(75,75,75,0.15);
+    }
+
+.header-items {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    padding-left: 20px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(49,49,49);
+}
+
 .nav {
-    float: right; 
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    align-items: center;
     font-family: interlight;
+    gap: 20px;
 }
 
 .nav a {
-    padding-right: 16px;
-    position: relative;
-    top: 10px;
     text-align: center;
     font-size: 12px;
     color: rgb(49,49,49);
@@ -102,46 +162,6 @@ textarea:focus, input:focus{
 .nav a:hover { 
   color: rgb(149,149,149);
 }
-
-.deftitle {
-    padding-left: 16px;
-    padding-top: 13px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    float: left;
-    color: rgb(49,49,49);
-}
-
-.normalinput {
-    background-color: rgba(0,0,0,0);
-    height: 30px;
-    font-size: 14px;
-    text-align: left;
-    font-color: rgb(250,249,246);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0px;
-}
-
-.inputdark {
-    border-bottom: 2px solid rgb(250,249,246);
-}
-
-.inputlight {
-    border-bottom: 2px solid rgb(49,49,49);
-}
-
-.header {
-    height: 40px;
-    position: fixed;
-    width: 100%;
-    font-family: inter;
-    background-color: rgba(255,255,255,0.84);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    }
 
 .space {
     padding-top: 50px;
@@ -175,7 +195,7 @@ textarea:focus, input:focus{
 }
 
 .bodytitle {
-    -webkit-font-smoothing: antialiased;
+     
     font-family: interbold;
     letter-spacing: 0px;
     padding: 7px 0px;
@@ -183,8 +203,17 @@ textarea:focus, input:focus{
     color: rgb(49,49,49);
 }
 
+.modaltitle {
+     
+    font-family: interregular;
+    letter-spacing: 0px;
+    padding: 7px 0px;
+    font-size: 17px;
+    color: rgb(49,49,49);
+}
+
 .bodytxt {
-    -webkit-font-smoothing: antialiased;
+     
     font-family: interregular;
     letter-spacing: -1.3px;
     font-size: 21px;
@@ -192,7 +221,7 @@ textarea:focus, input:focus{
 }
 
 .body2title {
-    -webkit-font-smoothing: antialiased;
+     
     font-family: interbold;
     letter-spacing: 0px;
     padding: 7px 0px;
@@ -201,7 +230,7 @@ textarea:focus, input:focus{
 }
 
 .body2txt {
-    -webkit-font-smoothing: antialiased;
+     
     font-family: interregular;
     letter-spacing: -0.9px;
     font-size: 14px;
@@ -209,7 +238,7 @@ textarea:focus, input:focus{
 }
 
 .body2txt-neg {
-    -webkit-font-smoothing: antialiased;
+     
     font-family: interregular;
     letter-spacing: -0.9px;
     font-size: 14px;
@@ -236,27 +265,41 @@ textarea:focus, input:focus{
 
 
 .modal {
-  display: none; /* Hidden by default */
+  display: block;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(250,249,246,0.5); /* Fallback color */
-  animation-duration: 0.1s;
-  animation-name: fadeIn;
+  visibility: visible;
+  opacity: 1;
+  animation: fadeIn 0.1s;
+  background-color: rgba(49, 49, 49, 0.5);
 }
 
+.is-show-none-trans {
+  opacity: 0;
+}
+
+
+.is-show-none-trans {
+  display: none;
+}
+
+
 .modal-content {
+  display: block;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  z-index: 1;
+  margin: 15% auto; 
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  width: 60%; /* Could be more or less, depending on screen size */
-
+  width: 60vw; 
+  opacity: 1;
+  animation: fadeIn 0.1s;
 }
 
 .item-display {
@@ -280,6 +323,7 @@ textarea:focus, input:focus{
     justify-content: space-around;
     gap: 15px;
     padding-top: 25px;
+    padding-bottom: 5px;
     font-size: 14px;
     color: rgb(49,49,49);
 }
@@ -293,6 +337,7 @@ textarea:focus, input:focus{
     align-items: center;
     justify-content: space-around;
     gap: 20px;
+    padding-top: 10px;
     font-size: 14px;
     color: rgb(49,49,49);
 }
@@ -304,6 +349,21 @@ textarea:focus, input:focus{
 }
 
 .item-display-total-indiv > p {
+    justify-content: space-around;
+    width: 270px;
+    flex: 1;
+    font-weight: bold;
+    font-size: 21px;
+    color: rgb(52,52,52);
+}
+
+.item-display-indiv > a {
+    justify-content: space-around;
+    width: 270px;
+    flex: 1;
+}
+
+.item-display-total-indiv > a {
     justify-content: space-around;
     width: 270px;
     flex: 1;
@@ -339,6 +399,13 @@ textarea:focus, input:focus{
     gap: 0px;
 }
 
+.item-name-vert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 .item-px-vert {
     display: flex;
     flex-direction: column;
@@ -365,7 +432,7 @@ textarea:focus, input:focus{
 }
 
 .offwhite {
-    color: rgb(250,249,246);
+    color: rgb(255,255,255);
     transition: 0.25s;
 }
 
@@ -400,7 +467,7 @@ textarea:focus, input:focus{
 }
 
 .bglight {
-    background-color: rgb(250,249,246);
+    background-color: rgb(255,255,255);
 }
 
 
