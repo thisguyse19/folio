@@ -41,6 +41,8 @@
 html {
     font-family: interregular;
     font-weight: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 body {
@@ -284,7 +286,7 @@ textarea:focus, input:focus{
 }
 
 
-.is-show-none-trans {
+.is-show-none {
   display: none;
 }
 
@@ -346,6 +348,8 @@ textarea:focus, input:focus{
     justify-content: space-around;
     width: 270px;
     flex: 1;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .item-display-total-indiv > p {
@@ -361,6 +365,8 @@ textarea:focus, input:focus{
     justify-content: space-around;
     width: 270px;
     flex: 1;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .item-display-total-indiv > a {
@@ -374,9 +380,12 @@ textarea:focus, input:focus{
 
 .item-display-indiv .disp-name {
     text-align: left;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .item-display-indiv .disp-price {
+    flex-basis: 100px;
     text-align: right;
 }
 
@@ -397,12 +406,15 @@ textarea:focus, input:focus{
     flex-direction: column;
     align-items: flex-start;
     gap: 0px;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .item-name-vert {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-grow: 2;
     gap: 10px;
 }
 
@@ -410,11 +422,68 @@ textarea:focus, input:focus{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-grow: 1;
 }
 
 .disp-name-under {
     color: rgb(153,153,153);
 }
+
+.tabbed-mini-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tnv-button-active {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(52,52,52);
+    transition: 0.25s;
+}
+
+.tnv-button-inactive {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(153,153,153);
+    transition: 0.25s;
+}
+
+.tnv-divider {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(153,153,153);
+    transition: 0.25s;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.nav-under {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.tnv-under-indiv {
+    width: 60vw;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 14px;
+    color: rgb(49,49,49);
 }
 
 .itemTotalText {
@@ -519,7 +588,9 @@ textarea:focus, input:focus{
     padding: 14px 16px;
 }
 
-
+.small-padding-top {
+    padding-top: 15px;
+}
 
 .column {
   float: left;

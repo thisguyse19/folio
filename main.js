@@ -152,3 +152,20 @@ window.onclick = function(event) {
     superToggle(retrieveModal,"is-show-none","is-show-none-trans");
   }
 }
+
+
+// Mini tabbed nav
+
+function switchTnv1(var2) {
+  var curActive = document.getElementsByClassName('tnv-button-active')[0];
+  var nxtActive = document.getElementById(var2);
+  var nxtUnder = document.getElementById("nav-under-" + var2);
+  var curUnder = document.getElementById("nav-under-" + curActive.id);
+
+  curActive.classList.remove('tnv-button-active');
+  curActive.classList.add('tnv-button-inactive');
+  curUnder.style.display = "none";
+  nxtActive.classList.remove('tnv-button-inactive');
+  nxtUnder.style.display = "flex";
+  nxtActive.classList.add('tnv-button-active');
+}

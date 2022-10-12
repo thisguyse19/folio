@@ -38,13 +38,8 @@
             <p class="disptitle-price" id="show-itemPriceS">PRICE</p>
         </div>
         <hr style="width:90vw; max-width:620px">
-        <div id="item-display-indiv" class="item-display-indiv">
-            <div id="item-desc" class="item-name-vert">
-                <p class="disp-name" id="show-itemNameS">Sample</p>
-                <p class="disp-name-under" id="show-itemDescS">Sample notes</p>
-            </div>
-                <p class="disp-price" id="show-itemPriceS">$ 150</p>
-        </div>
+        
+
 
 
 
@@ -96,7 +91,62 @@
             <br>
             <span>Category / notes &#183; </span><span id="item-modal-notes" style="color:rgb(143,143,143);"></span>
         </div>
-        <div class="btn-container">
+
+        <div class="tabbed-mini-nav space">
+            <a onclick="switchTnv1('reviews-tnv')" class="tnv-button-active" id="reviews-tnv">REVIEWS</a>
+            <p class="tnv-divider">|</p>
+            <a onclick="switchTnv1('simitm-tnv')" class="tnv-button-inactive" id="simitm-tnv">SIMILAR ITEMS</a>
+            <p class="tnv-divider">|</p>
+            <a onclick="switchTnv1('poo-tnv')" class="tnv-button-inactive" id="poo-tnv">STORES</a>
+        </div>
+
+        <div class="nav-under space" id="nav-under-reviews-tnv">
+            <div id="tnv-review-vert" class="tnv-under-indiv">
+                <div id="item-desc" class="item-name-vert">
+                    <p class="disp-name" id="review-title">Topo Designs Rover Pack Review (Tech Version) | Pack Hacker</p>
+                    <p class="disp-name-under" id="review-link">https://packhacker.com/travel-gear/topo-designs/rover-pack-tech/</p>
+                </div>
+
+                <div id="item-desc" class="item-name-vert">
+                    <p class="disp-name" id="review-title">Topo Designs Rover Pack Review - Territory Supply</p>
+                    <p class="disp-name-under" id="review-link">https://www.territorysupply.com/gear-review-topo-designs-rover-pack</p>
+                </div>
+
+            </div> 
+
+        </div>
+
+        <div class="nav-under space" id="nav-under-simitm-tnv" style="display:none;">
+            <div id="tnv-similar-vert" class="tnv-under-indiv">
+                <div id="item-desc" class="item-name-vert">
+                    <p class="disp-name" id="similar-title">Topo Designs Daypack Tech</p>
+                    <p class="disp-name-under" id="similar-notes">Might be a good choice, but looks smaller than the Rover Tech.</p>
+                </div>
+
+                <div id="item-desc" class="item-name-vert">
+                    <p class="disp-name" id="similar-title">Mystery Ranch Urban Assault 21</p>
+                    <p class="disp-name-under" id="similar-notes">Looks too rugged for daily use.</p>
+                </div>
+                
+            </div> 
+        </div>
+
+        <div class="nav-under space" id="nav-under-poo-tnv" style="display:none;">
+            <div id="tnv-similar-vert" class="tnv-under-indiv">
+                <div id="item-desc" class="item-name-vert">
+                    <p class="disp-name" id="similar-title">Poo Designs Daypack Tech</p>
+                    <p class="disp-name-under" id="similar-notes">Might be a good choice, but looks smaller than the Rover Tech.</p>
+                </div>
+
+                <div id="item-desc" class="item-name-vert">
+                    <p class="disp-name" id="similar-title">Mystery Ranch Urban Assault 21</p>
+                    <p class="disp-name-under" id="similar-notes">Looks too rugged for daily use.</p>
+                </div>
+                
+            </div> 
+        </div>
+
+        <div class="btn-container small-padding-top">
         <a class="greyish negbtn closeRbtn">Close</a>
         </div>
         <br>
