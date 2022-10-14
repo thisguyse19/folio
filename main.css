@@ -19,12 +19,12 @@
 @font-face {
     font-family: interbold;
     src: url(interFont/interbold.ttf);
-    font-weight: bold;
 }
 
 @font-face {
     font-family: intersemibold;
     src: url(interFont/intersemibold.ttf);
+    font-weight: semibold;
 }
 
 @font-face {
@@ -139,9 +139,9 @@ textarea:focus, input:focus{
 .header-title {
     padding-left: 20px;
     text-align: left;
-    font-weight: bold;
-    font-size: 18px;
-    color: rgb(49,49,49);
+    font-weight: semibold;
+    font-size: 20px;
+    color: black;
 }
 
 .nav {
@@ -170,17 +170,28 @@ textarea:focus, input:focus{
 }
 
 .bigtitle {
-    font-size: 40px;
-    font-family: intersemibold;
-    font-weight: 600;
-    letter-spacing: -2px;
+    font-size: 32px;
+    font-family: interregular;
 }
 
 .medtitle {
-    font-size: 30px;
-    font-family: intersemibold;
-    font-weight: 600;
-    letter-spacing: -1px;
+    font-size: 32px;
+    font-family: interregular;
+    text-align: left;
+}
+
+.description-container{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+
+.flex-left-align {
+    display:flex;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 10px;
 }
 
 .item-no {
@@ -234,9 +245,15 @@ textarea:focus, input:focus{
 .body2txt {
      
     font-family: interregular;
-    letter-spacing: -0.9px;
-    font-size: 14px;
-    font-weight: 800;
+    font-size: 16px;
+    color: black;
+}
+
+.body2txt-inactive {
+     
+    font-family: interregular;
+    font-size: 16px;
+    color: #999999;
 }
 
 .body2txt-neg {
@@ -251,7 +268,6 @@ textarea:focus, input:focus{
 .page-header-container {
     display:  flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
     padding-left: 37px;
     padding-right: 37px;
@@ -301,7 +317,6 @@ textarea:focus, input:focus{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   width: 60vw; 
   opacity: 1;
-  animation: fadeIn 0.1s;
 }
 
 .item-display {
@@ -312,6 +327,7 @@ textarea:focus, input:focus{
     justify-content: center;
     width: 100vw;
     padding-top: 37px;
+    gap: 25px;
 }
 
 
@@ -323,8 +339,6 @@ textarea:focus, input:focus{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 15px;
-    padding-top: 25px;
     padding-bottom: 5px;
     font-size: 14px;
     color: rgb(49,49,49);
@@ -614,6 +628,6 @@ textarea:focus, input:focus{
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;   background-color: rgba(49, 49, 49, 0);}
+    to {opacity: 1;   background-color: rgba(49, 49, 49, 0.5);}
 }

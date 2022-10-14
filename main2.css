@@ -1,0 +1,246 @@
+@font-face {
+    font-family: inter;
+    src: url(inter.ttf);
+  }
+
+@font-face {
+    font-family: interregular;
+    src: url(interFont/inter.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: interlight;
+    src: url(interFont/interlight.ttf);
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: interbold;
+    src: url(interFont/interbold.ttf);
+}
+
+@font-face {
+    font-family: intersemibold;
+    src: url(interFont/intersemibold.ttf);
+}
+
+@font-face {
+    font-family: interheavy;
+    src: url(interFont/interheavy.ttf);
+    font-weight: heavy;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+p {
+    font-family: interregular;
+}
+
+a {
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    font-family: inter;
+    background-color: rgba(255,255,255,0.84);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 0px 15px rgba(75,75,75,0.15);
+    }
+
+.header-items {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    padding-left: 20px;
+    text-align: left;
+    font-family: intersemibold;
+    font-size: 20px;
+    color: black;
+}
+
+.nav {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    align-items: center;
+    font-family: interlight;
+    gap: 20px;
+}
+
+.nav a {
+    text-align: center;
+    font-size: 12px;
+    color: rgb(49,49,49);
+    transition: 0.25s;
+}
+
+.nav a:hover { 
+  color: rgb(149,149,149);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.page-head {
+    background-color: #fbfbfb;
+    height: 250px;
+    max-height: 40vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.page-head-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100vw;
+}
+
+.floating-paper {
+    width: 100%;
+    position: fixed;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-paper-container {
+    background-color: white;
+    box-shadow: 0 0px 15px rgba(75,75,75,0.15);
+    width: 500px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding:  30px;
+    gap: 15px;
+}
+
+.body-title {
+    font-family: interregular;
+    font-size: 32px;
+    color: black;
+}
+
+.body-text {
+    font-family: interregular;
+    font-size: 16px;
+    color: black;
+}
+
+.body-text-inactive {
+    font-family: interregular;
+    font-size: 16px;
+    color: rgb(153,153,153);
+}
+
+.flex-left-align {
+    display:flex;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-container {
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.item-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 5px;
+}
+
+.normalbtn {
+    background-color: rgb(208,231,228);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-color: rgb(52,52,52);
+    transition: 0.25s;
+    font-family: interregular;
+}
+
+.negbtn {
+    background-color: rgb(255,102,102);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-color: rgb(52,52,52);
+    transition: 0.25s;
+    font-family: interregular;
+}
+
+.normalbtn:hover { 
+  background-color: rgb(231,250,246);
+}
+
+.negbtn:hover {
+    background-color: rgb(255,130,130);
+}
+

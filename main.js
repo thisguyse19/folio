@@ -35,6 +35,9 @@ function goMain() {
   else if (sweat == "shop") {
     window.location = ("cartlist.html");
   }
+  else if (sweat == "shop2") {
+    window.location = ("cartlist2.html");
+  }
   else {
     document.getElementById('nth').innerHTML = "Wrong codeword! Try again.";
   }
